@@ -15,11 +15,7 @@ Check `defaults/main.yml`
 
 ##  Dependencies
 
-Needs `do` Jinja extension.
- 
-Add `jinja2_extensions = jinja2.ext.do` to `[defaults]` section 
-of ansible.cfg.
-
+Jinja `combine` filter - contained in Ansible 2.0.
 
 ##  Example Playbook
 

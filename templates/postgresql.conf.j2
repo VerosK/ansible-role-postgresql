@@ -4,10 +4,7 @@
 
 {# Create config from __default config, postgresql_config and postgresql_extra_config #}
 {% set config = __postgresql_default_config -%}
-{% do config.update(postgresql_config) -%}
-{% do config.update(postgresql_extra_config) -%}
-{#  #}
-{%- for key, item in config | dictsort -%}
+{%- for key, item in config|combine(postgresql_config,postgresql_extra_config)| dictsort -%}
 {%- if item is mapping -%}
 # {{ item.comment }}
 {{ key }} = '{{ item.value }}'
