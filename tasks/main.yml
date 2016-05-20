@@ -28,6 +28,7 @@
 
 - name: enable service
   service:
-    name: "postgresql"
+    name: "{{ postgresql_service }}"
     enabled: "yes"
+    state: "started"
   notify: restart postgresql
