@@ -1,21 +1,7 @@
 ---
-# tasks file for postgresql
 
-- name: Check ansible version
-  ping:
-
-- name: Add apt repository (when needed)
-  apt_key:
-    url: "{{ item.apt_key }}"
-    state: "{{ item.state|default('present') }}"
-  with_items: postgresql_apt_repository
-  when: posgresql_add_repository
-
-- name: Add apt repository (when needed)
-  apt_repository:
-    repo: "{{ item.repository_url }}"
-    state: "{{ item.state|default('present') }}"
-  with_items: postgresql_apt_repository
+- name: Set-up apt-repository (when needed)
+  include: apt-repository.yml
   when: posgresql_add_repository
 
 - name: Install postgresql

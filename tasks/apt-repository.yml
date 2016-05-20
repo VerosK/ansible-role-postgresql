@@ -1,0 +1,14 @@
+---
+- name: Add apt repository
+  apt_key:
+    url: "{{ item.apt_key }}"
+    state: "{{ item.state|default('present') }}"
+  with_items: postgresql_apt_repository
+  when: posgresql_add_repository
+
+- name: Add apt repository
+  apt_repository:
+    repo: "{{ item.repository_url }}"
+    state: "{{ item.state|default('present') }}"
+  with_items: postgresql_apt_repository
+  when: posgresql_add_repository
