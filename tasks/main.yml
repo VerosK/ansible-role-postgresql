@@ -35,3 +35,4 @@
     enabled: "yes"
     state: "started"
   notify: restart postgresql
+  ignore_errors: '{{ postgresql_ignore_start_errors }}'

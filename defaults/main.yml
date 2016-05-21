@@ -8,6 +8,7 @@ postgresql_apt_repository:
     repository_url: "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
 
 postgresql_service: 'postgresql'
+postgresql_ignore_start_errors: false
 
 postgresql_deb_packages:
   - postgresql-9.5
