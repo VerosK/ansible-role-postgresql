@@ -35,6 +35,8 @@ __postgresql_default_config:
   max_connections: "100"
   port: "5432"
   shared_buffers: "256MB"
+  work_mem: "16MB"
+  effective_cache_size: "512MB"
   ssl: "false"
   ssl_cert_file: "/etc/ssl/certs/ssl-cert-snakeoil.pem"
   ssl_key_file: "/etc/ssl/private/ssl-cert-snakeoil.key"
