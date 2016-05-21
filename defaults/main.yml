@@ -50,9 +50,7 @@ postgresql_extra_config: {}
 
 __postgresql_default_hba:
     - "# Local unix socket "
-    - local   all     postgres       peer
-    - "# Local connections"
-    - local    all     all            peer
+    - local   all     postgres        peer
     - "# IPv4 local connections"
     - local    all     127.0.0.1/32   md5
     - "# IPv6 local connections"
