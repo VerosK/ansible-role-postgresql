@@ -40,9 +40,9 @@
     backup: yes
   with_items:
     - src: "pg_hba.conf.j2"
-      dest: "{{ postgresql_config_file }}"
-    - src: "postgresql.conf.j2"
       dest: "{{ postgresql_hba_file }}"
+    - src: "postgresql.conf.j2"
+      dest: "{{ postgresql_config_file }}"
   notify: restart postgresql
 
 - name: enable service
