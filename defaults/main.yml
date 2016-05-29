@@ -35,11 +35,12 @@ postgresql_extra_config: {}
 
 __postgresql_default_hba:
     - "# Local unix socket "
-    - local   all     postgres        peer
+    - local    all     postgres          peer
+    - local    all     all               md5
     - "# IPv4 local connections"
-    - local    all     127.0.0.1/32   md5
+    - host     all     all  127.0.0.1/8  md5
     - "# IPv6 local connections"
-    - host     all     all  ::1/128   md5
+    - host     all     all  ::1/128      md5
 
 # additional lines in pg_hba
 postgresql_hba: []
