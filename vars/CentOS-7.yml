@@ -28,6 +28,6 @@ __postgresql_default_config:
   work_mem: "16MB"
   effective_cache_size: "512MB"
   ssl: "false"
-  stats_temp_directory: "/var/run/postgresql/9.5-main.pg_stat_tmp"
+  stats_temp_directory: "/var/run/postgresql"
   timezone: "UTC"
   unix_socket_directories: "/var/run/postgresql"
