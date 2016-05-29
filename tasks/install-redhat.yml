@@ -1,0 +1,24 @@
+---
+- name: 'Check ansible version >= 2.0'
+  assert:
+    that:
+    - 'ansible_version.major is number'
+    - 'ansible_version.major >= 2'
+
+- name: Set-up yum-repository (when needed)
+  include: yum-repository.yml
+  when: posgresql_add_repository
+
+- name: Install postgresql
+  yum:
+    name: "{{ item }}"
+    state: "present"
+  with_items: '{{ postgresql_yum_packages }}'
+  notify: restart postgresql
+  register: pgsql_installed
+
+- name: Run initdb
+  shell: postgresql-setup initdb
+  args:
+    creates: /var/lib/pgsql/data/PG_VERSION
+  when: pgsql_installed|changed

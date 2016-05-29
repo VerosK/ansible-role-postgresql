@@ -7,7 +7,7 @@ Ansible Role for PostgreSQL Installation.   ( work-in-progress )
 
 This role require Ansible 2.0 or higher.
 
-This role was designed for 16.04 LTS. 
+This role was designed on Ubuntu 16.04 LTS and Centos 7. 
 
 ## Role Variables
 

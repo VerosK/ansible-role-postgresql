@@ -1,0 +1,33 @@
+__postgresql_datadir: '/var/lib/pgsql/data'
+__postgresql_config_dir: '/var/lib/pgsql/data'
+__postgresql_hba_file: '/var/lib/pgsql/data/pg_hba.conf'
+__postgresql_config_file: '/var/lib/pgsql/data/postgresql.conf'
+
+__postgresql_service: 'postgresql'
+
+
+__postgresql_default_config:
+  data_directory:
+      value: "{{ __postgresql_datadir }}"
+      comment: "Data location"
+  datestyle: "iso, mdy"
+  default_text_search_config: "pg_catalog.english"
+  external_pid_file: "/var/run/postgresql/9.5-main.pid"
+  hba_file: "{{ __postgresql_hba_file }}"
+  ident_file: "{{__postgresql_datadir }}/pg_ident.conf"
+  lc_messages: "en_US.UTF-8"
+  lc_monetary: "en_US.UTF-8"
+  lc_numeric: "en_US.UTF-8"
+  lc_time: "en_US.UTF-8"
+  listen_addresses: "*"
+  log_line_prefix: "%t [%p-%l] %q%u@%d "
+  log_timezone: "UTC"
+  max_connections: "100"
+  port: "5432"
+  shared_buffers: "256MB"
+  work_mem: "16MB"
+  effective_cache_size: "512MB"
+  ssl: "false"
+  stats_temp_directory: "/var/run/postgresql/9.5-main.pg_stat_tmp"
+  timezone: "UTC"
+  unix_socket_directories: "/var/run/postgresql"
