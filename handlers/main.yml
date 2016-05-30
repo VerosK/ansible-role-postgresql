@@ -3,3 +3,4 @@
   service:
     name: "{{ postgresql_service }}"
     state: "restarted"
+  when: postgresql_service_enable

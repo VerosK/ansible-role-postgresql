@@ -32,6 +32,8 @@ postgresql_config: {}
 # additional lines in posgtresql_config
 postgresql_extra_config: {}
 
+postgresql_service_enable: true
+postgresql_service_state: started
 
 __postgresql_default_hba:
     - "# Local unix socket "

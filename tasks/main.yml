@@ -9,7 +9,7 @@
   include_vars: '{{ item }}'
   with_first_found:
     - files:
-      - '{{ ansible_distribution }}-{{ansible_distribution_release}}.yml'
+      - '{{ ansible_distribution }}-{{ansible_distribution_version}}.yml'
       - '{{ ansible_distribution }}-{{ansible_distribution_major_version}}.yml'
       - '{{ ansible_distribution }}.yml'
       - '{{ ansible_os_family }}.yml'
@@ -49,7 +49,7 @@
 - name: enable service
   service:
     name: "{{ postgresql_service }}"
-    enabled: "yes"
-    state: "started"
+    enabled: "{{ postgresql_service_enable }}"
+    state: "{{ postgresql_service_state }}"
   notify: restart postgresql
   ignore_errors: '{{ postgresql_ignore_start_errors }}'
