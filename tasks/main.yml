@@ -23,11 +23,11 @@
     postgresql_service: '{{ postgresql_service|default(__postgresql_service) }}'
 
 
-- name: Install on debian
+- name: Install on Debian
   include: install-debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: Install on debian
+- name: Install on RedHat
   include: install-redhat.yml
   when: ansible_os_family == 'RedHat'
 
