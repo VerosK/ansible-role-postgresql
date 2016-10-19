@@ -3,7 +3,7 @@
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
 # __postgresql_default_hba default lines
-{% for item in  __postgresql_default_hba -%}
+{% for item in  postgresql_default_hba|default(__postgresql_default_hba) -%}
 {{ item }}
 {% endfor -%}
 #
