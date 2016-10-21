@@ -13,5 +13,6 @@
   apt:
     name: "{{ item }}"
     state: "present"
+    cache_valid_time: 7200  # 2 hours
   with_items: '{{ postgresql_deb_packages }}'
   notify: restart postgresql
