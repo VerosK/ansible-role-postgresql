@@ -35,6 +35,10 @@ postgresql_extra_config: {}
 
 postgresql_service_enable: true
 postgresql_service_state: started
+postgresql_user: postgres
+
+postgresql_initdb_params: "--encoding=UTF8"
+#postgresql_initdb_params: "--data-checksums --encoding=UTF8"
 
 __postgresql_default_hba:
     - "# Local unix socket "
@@ -47,3 +51,6 @@ __postgresql_default_hba:
 
 # additional lines in pg_hba
 postgresql_hba: []
+
+#
+postgresql_init_database: true

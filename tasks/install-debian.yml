@@ -15,3 +15,11 @@
     state: "present"
   with_items: '{{ postgresql_deb_packages }}'
   notify: restart postgresql
+
+- name: Create database dir
+  shell: '{{ postgresql_bindir }}/initdb {{ postgresql_initdb_params }} --pgdata={{ postgresql_datadir }}'
+  args:
+      creates: '{{ postgresql_datadir }}/base'
+  when: postgresql_init_database
+  become: yes
+  become_user: '{{ postgresql_user }}'
