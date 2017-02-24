@@ -5,7 +5,7 @@ posgresql_add_repository: false
 
 postgresql_apt_repository:
   - apt_key: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
-    repository_url: "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main"
+    repository_url: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
 
 postgresql_service: 'postgresql'
 postgresql_ignore_start_errors: false
@@ -23,6 +23,7 @@ postgresql_yum_packages:
 
 # These are set in distribution independent way
 #postgresql_datadir: '/var/lib/postgresql/9.5/main'
+#postgresql_bindir: '/usr/lib/postgresql/9.5/main'
 #postgresql_config_dir: '/etc/postgresql/9.5/main'
 #postgresql_hba_file: '/etc/postgresql/9.5/main/pg_hba.conf'
 #postgresql_config_file: '/etc/postgresql/9.5/main/postgresql.conf'
