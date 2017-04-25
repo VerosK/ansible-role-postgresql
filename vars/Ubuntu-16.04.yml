@@ -1,3 +1,4 @@
+__postgresql_bindir: '/usr/lib/postgresql/9.5/bin/'
 __postgresql_datadir: '/var/lib/postgresql/9.5/main'
 __postgresql_config_dir: '/etc/postgresql/9.5/main'
 __postgresql_bin_dir: '/usr/lib/postgresql/9.5/'

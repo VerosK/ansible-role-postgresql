@@ -21,6 +21,8 @@
     postgresql_hba_file: '{{ postgresql_hba_file|default(__postgresql_hba_file) }}'
     postgresql_config_file: '{{ postgresql_config_file|default(__postgresql_config_file) }}'
     postgresql_service: '{{ postgresql_service|default(__postgresql_service) }}'
+    postgresql_datadir: '{{ postgresql_datadir|default(__postgresql_datadir) }}'
+    postgresql_bindir: '{{ postgresql_bindir|default(__postgresql_bindir) }}'
 
 
 - name: Install on Debian
