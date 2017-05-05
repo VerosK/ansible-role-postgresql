@@ -1,6 +1,7 @@
 __postgresql_datadir: '/var/lib/pgsql/data'
 __postgresql_config_dir: '/var/lib/pgsql/data'
 __postgresql_hba_file: '/var/lib/pgsql/data/pg_hba.conf'
+__postgresql_ident_file: '/var/lib/pgsql/data/pg_ident.conf'
 __postgresql_config_file: '/var/lib/pgsql/data/postgresql.conf'
 
 __postgresql_service: 'postgresql'

@@ -3,6 +3,7 @@ __postgresql_datadir: '/var/lib/postgresql/9.5/main'
 __postgresql_config_dir: '/etc/postgresql/9.5/main'
 __postgresql_bin_dir: '/usr/lib/postgresql/9.5/'
 __postgresql_hba_file: '/etc/postgresql/9.5/main/pg_hba.conf'
+__postgresql_ident_file: '/etc/postgresql/9.5/main/pg_ident.conf'
 
 __postgresql_config_file: '/etc/postgresql/9.5/main/postgresql.conf'
 

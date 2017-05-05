@@ -54,3 +54,5 @@ postgresql_hba: []
 
 #
 postgresql_init_database: true
+
+postgresql_ident: []
