@@ -1,3 +1,4 @@
+__postgresql_bindir: '/usr/bin'
 __postgresql_datadir: '/var/lib/pgsql/data'
 __postgresql_config_dir: '/var/lib/pgsql/data'
 __postgresql_hba_file: '/var/lib/pgsql/data/pg_hba.conf'
